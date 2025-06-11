@@ -124,7 +124,7 @@ body {
   }
 
   .btn-modern-outline {
-    @apply border-2 border-red-600 dark:border-red-500 text-red-600 dark:text-red-400 hover:bg-red-600 dark:hover:bg-red-500 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-200;
+    @apply border-2 border-red-600 bg-white dark:bg-gray-800 dark:border-red-500 text-red-600 dark:text-red-400 hover:bg-red-600 dark:hover:bg-red-500 hover:text-white dark:hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-200;
   }
 
   /* Inputs */

@@ -1,5 +1,65 @@
-import { CheckCircle, Settings, Zap, Globe, Shield, Lightbulb, type LucideIcon } from "lucide-react"
+import {
+  CheckCircle,
+  Settings,
+  Zap,
+  Globe,
+  Shield,
+  Lightbulb,
+  type LucideIcon,
+} from "lucide-react";
 
+// Features data with Lucide icons
+export interface Feature {
+  id: number;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+export const features: Feature[] = [
+  {
+    id: 1,
+    title: "Premium Quality Materials",
+    description:
+      "We use only the highest quality materials to ensure durability and longevity of all our products.",
+    icon: CheckCircle,
+  },
+  {
+    id: 2,
+    title: "Customized Solutions",
+    description:
+      "We offer tailored kitchen equipment solutions to meet the specific needs of your business or home.",
+    icon: Settings,
+  },
+  {
+    id: 3,
+    title: "Energy Efficient",
+    description:
+      "Our equipment is designed to minimize energy consumption while maximizing performance.",
+    icon: Zap,
+  },
+  {
+    id: 4,
+    title: "Nationwide Service",
+    description:
+      "We provide installation and maintenance services across India to ensure your equipment performs optimally.",
+    icon: Globe,
+  },
+  {
+    id: 5,
+    title: "Warranty & Support",
+    description:
+      "All our products come with comprehensive warranty and dedicated customer support.",
+    icon: Shield,
+  },
+  {
+    id: 6,
+    title: "Innovative Design",
+    description:
+      "We continuously innovate to bring you the latest advancements in kitchen equipment technology.",
+    icon: Lightbulb,
+  },
+];
 // Products data
 export const products = [
   {
@@ -15,7 +75,8 @@ export const products = [
     id: 2,
     name: "Stainless Steel Work Tables",
     slug: "stainless-steel-work-tables",
-    description: "Premium quality stainless steel work tables with customizable configurations for any kitchen layout.",
+    description:
+      "Premium quality stainless steel work tables with customizable configurations for any kitchen layout.",
     image: "https://elina.frappe.cloud/files/product-2.png",
     category: "commercial",
   },
@@ -23,7 +84,8 @@ export const products = [
     id: 3,
     name: "Ventilation Systems",
     slug: "ventilation-systems",
-    description: "Advanced kitchen ventilation systems that ensure a clean, safe, and comfortable working environment.",
+    description:
+      "Advanced kitchen ventilation systems that ensure a clean, safe, and comfortable working environment.",
     image: "https://elina.frappe.cloud/files/product-3.png",
     category: "commercial",
   },
@@ -31,7 +93,8 @@ export const products = [
     id: 4,
     name: "Refrigeration Units",
     slug: "refrigeration-units",
-    description: "Energy-efficient refrigeration units designed for commercial kitchens with various capacity options.",
+    description:
+      "Energy-efficient refrigeration units designed for commercial kitchens with various capacity options.",
     image: "https://placehold.co/600x400.png",
     category: "commercial",
   },
@@ -39,7 +102,8 @@ export const products = [
     id: 5,
     name: "Modular Kitchen Systems",
     slug: "modular-kitchen-systems",
-    description: "Customizable modular kitchen systems for residential spaces with modern design and functionality.",
+    description:
+      "Customizable modular kitchen systems for residential spaces with modern design and functionality.",
     image: "https://placehold.co/600x400.png",
     category: "residential",
   },
@@ -47,47 +111,72 @@ export const products = [
     id: 6,
     name: "Kitchen Islands",
     slug: "kitchen-islands",
-    description: "Versatile kitchen islands that provide additional workspace and storage for any kitchen layout.",
+    description:
+      "Versatile kitchen islands that provide additional workspace and storage for any kitchen layout.",
     image: "https://placehold.co/600x400.png",
     category: "residential",
   },
-]
+];
 
 export const commercialProducts = [
   {
     id: 1,
     name: "Commercial Range Cookers",
-    description: "High-performance gas and electric range cookers for professional kitchens",
+    description:
+      "High-performance gas and electric range cookers for professional kitchens",
     image: "https://elina.frappe.cloud/files/product-1.png",
-    features: ["Heavy-duty construction", "Multiple burner configurations", "Easy maintenance"],
+    features: [
+      "Heavy-duty construction",
+      "Multiple burner configurations",
+      "Easy maintenance",
+    ],
   },
   {
     id: 2,
     name: "Stainless Steel Work Tables",
-    description: "Durable work surfaces with storage options for commercial food preparation",
+    description:
+      "Durable work surfaces with storage options for commercial food preparation",
     image: "https://elina.frappe.cloud/files/product-2.png",
-    features: ["Food-grade stainless steel", "Adjustable shelving", "Easy to clean"],
+    features: [
+      "Food-grade stainless steel",
+      "Adjustable shelving",
+      "Easy to clean",
+    ],
   },
   {
     id: 3,
     name: "Commercial Dishwashers",
     description: "High-capacity dishwashing systems for restaurants and hotels",
     image: "https://elina.frappe.cloud/files/R.jpg",
-    features: ["Fast wash cycles", "Energy efficient", "Multiple rack configurations"],
+    features: [
+      "Fast wash cycles",
+      "Energy efficient",
+      "Multiple rack configurations",
+    ],
   },
   {
     id: 4,
     name: "Ventilation Systems",
-    description: "Complete kitchen ventilation solutions including hoods and exhaust systems",
+    description:
+      "Complete kitchen ventilation solutions including hoods and exhaust systems",
     image: "https://elina.frappe.cloud/files/product-3.png",
-    features: ["Powerful extraction", "Fire suppression ready", "Custom sizing available"],
+    features: [
+      "Powerful extraction",
+      "Fire suppression ready",
+      "Custom sizing available",
+    ],
   },
   {
     id: 5,
     name: "Refrigeration Units",
-    description: "Commercial refrigerators and freezers for food storage and display",
+    description:
+      "Commercial refrigerators and freezers for food storage and display",
     image: "https://elina.frappe.cloud/files/OIP.jpg",
-    features: ["Temperature control", "Energy efficient", "Various sizes available"],
+    features: [
+      "Temperature control",
+      "Energy efficient",
+      "Various sizes available",
+    ],
   },
   {
     id: 6,
@@ -96,13 +185,13 @@ export const commercialProducts = [
     image: "https://elina.frappe.cloud/files/Catering-PrepEqu-FoodSlicers2.jpg",
     features: ["Heavy-duty motors", "Safety features", "Easy operation"],
   },
-]
-
+];
 
 export const services = [
   {
     title: "Part Identification",
-    description: "Help identifying the correct replacement part for your equipment",
+    description:
+      "Help identifying the correct replacement part for your equipment",
     icon: "🔍",
   },
   {
@@ -120,50 +209,86 @@ export const services = [
     description: "Fast delivery to minimize equipment downtime",
     icon: "🚚",
   },
-]
+];
 
 export const customSolutions = [
   {
     id: 1,
     title: "Restaurant Kitchens",
-    description: "End-to-end design and equipment for efficient, high-volume restaurant operations.",
+    description:
+      "End-to-end design and equipment for efficient, high-volume restaurant operations.",
     image: "https://elina.frappe.cloud/files/Research-Developme.png",
-    process: ["Site Survey", "Menu Analysis", "Layout Planning", "Installation & Handover"],
+    process: [
+      "Site Survey",
+      "Menu Analysis",
+      "Layout Planning",
+      "Installation & Handover",
+    ],
   },
   {
     id: 2,
     title: "Café & Bakery Kitchens",
-    description: "Specialized layouts and baking equipment for cafes, bakeries, and patisseries.",
+    description:
+      "Specialized layouts and baking equipment for cafes, bakeries, and patisseries.",
     image: "https://elina.frappe.cloud/files/Indian-themed-bakery.png",
-    process: ["Space Assessment", "Equipment Selection", "Utility Mapping", "Commissioning"],
+    process: [
+      "Space Assessment",
+      "Equipment Selection",
+      "Utility Mapping",
+      "Commissioning",
+    ],
   },
   {
     id: 3,
     title: "Catering Kitchens",
-    description: "Mobile and high-capacity setups designed for off-site catering services.",
+    description:
+      "Mobile and high-capacity setups designed for off-site catering services.",
     image: "https://elina.frappe.cloud/files/bulk-cooking-kitchen.png",
-    process: ["Requirement Analysis", "Custom Fabrication", "Mobility Planning", "Deployment"],
+    process: [
+      "Requirement Analysis",
+      "Custom Fabrication",
+      "Mobility Planning",
+      "Deployment",
+    ],
   },
   {
     id: 4,
     title: "Cloud Kitchens / Ghost Kitchens",
-    description: "Compact, delivery-optimized kitchens for virtual brands and multi-brand setups.",
+    description:
+      "Compact, delivery-optimized kitchens for virtual brands and multi-brand setups.",
     image: "https://elina.frappe.cloud/files/cloud.png",
-    process: ["Workflow Optimization", "Multi-brand Integration", "Ventilation & Safety", "Setup & Launch"],
+    process: [
+      "Workflow Optimization",
+      "Multi-brand Integration",
+      "Ventilation & Safety",
+      "Setup & Launch",
+    ],
   },
   {
     id: 5,
     title: "Institutional Kitchens",
-    description: "Mass-meal production kitchens for schools, colleges, hospitals, and hostels.",
+    description:
+      "Mass-meal production kitchens for schools, colleges, hospitals, and hostels.",
     image: "https://elina.frappe.cloud/files/inst.png",
-    process: ["Capacity Planning", "Industrial Equipment Setup", "Hygiene Compliance", "Staff Training"],
+    process: [
+      "Capacity Planning",
+      "Industrial Equipment Setup",
+      "Hygiene Compliance",
+      "Staff Training",
+    ],
   },
   {
     id: 6,
     title: "Central Commissary Kitchens",
-    description: "Large-scale centralized kitchens for multi-outlet food production and distribution.",
+    description:
+      "Large-scale centralized kitchens for multi-outlet food production and distribution.",
     image: "https://elina.frappe.cloud/files/centralcommissaryk.png",
-    process: ["Production Flow Design", "Bulk Equipment Installation", "Cold Storage Integration", "Automation"],
+    process: [
+      "Production Flow Design",
+      "Bulk Equipment Installation",
+      "Cold Storage Integration",
+      "Automation",
+    ],
   },
   /*
   {
@@ -173,79 +298,31 @@ export const customSolutions = [
     image: "https://elina.frappe.cloud/600x400.png",
     process: ["Requirement Gathering", "Specialized Equipment", "Prototype Setup", "Iteration Support"],
   },*/
-]
+];
 
+export const customizationOptions = [
+  {
+    title: "Size & Dimensions",
+    description: "Equipment sized to fit your exact space requirements",
+    icon: "📏",
+  },
+  {
+    title: "Material Selection",
+    description: "Choose from various grades of stainless steel and finishes",
+    icon: "🔧",
+  },
+  {
+    title: "Feature Integration",
+    description: "Add specific features and functionalities as needed",
+    icon: "⚙️",
+  },
+  {
+    title: "Smart Technology Integration",
+    description: "Incorporate IoT, automation, and energy-efficient systems",
+    icon: "📡",
+  },
+];
 
-  export const customizationOptions = [
-    {
-      title: "Size & Dimensions",
-      description: "Equipment sized to fit your exact space requirements",
-      icon: "📏",
-    },
-    {
-      title: "Material Selection",
-      description: "Choose from various grades of stainless steel and finishes",
-      icon: "🔧",
-    },
-    {
-      title: "Feature Integration",
-      description: "Add specific features and functionalities as needed",
-      icon: "⚙️",
-    },
-    {
-      title: "Smart Technology Integration",
-      description: "Incorporate IoT, automation, and energy-efficient systems",
-      icon: "📡",
-    },
-  ]
-
-// Features data with Lucide icons
-export interface Feature {
-  id: number
-  title: string
-  description: string
-  icon: LucideIcon
-}
-
-export const features: Feature[] = [
-  {
-    id: 1,
-    title: "Premium Quality Materials",
-    description: "We use only the highest quality materials to ensure durability and longevity of all our products.",
-    icon: CheckCircle,
-  },
-  {
-    id: 2,
-    title: "Customized Solutions",
-    description: "We offer tailored kitchen equipment solutions to meet the specific needs of your business or home.",
-    icon: Settings,
-  },
-  {
-    id: 3,
-    title: "Energy Efficient",
-    description: "Our equipment is designed to minimize energy consumption while maximizing performance.",
-    icon: Zap,
-  },
-  {
-    id: 4,
-    title: "Nationwide Service",
-    description:
-      "We provide installation and maintenance services across India to ensure your equipment performs optimally.",
-    icon: Globe,
-  },
-  {
-    id: 5,
-    title: "Warranty & Support",
-    description: "All our products come with comprehensive warranty and dedicated customer support.",
-    icon: Shield,
-  },
-  {
-    id: 6,
-    title: "Innovative Design",
-    description: "We continuously innovate to bring you the latest advancements in kitchen equipment technology.",
-    icon: Lightbulb,
-  },
-]
 
 // Testimonials data
 export const testimonials = [
@@ -267,7 +344,7 @@ export const testimonials = [
     position: "Facility Manager, Corporate Cafeteria",
     text: "The energy efficiency of Syena's equipment has significantly reduced our operational costs. Their team was professional during installation and provided excellent training to our staff.",
   },
-]
+];
 
 // Gallery items data
 export const galleryItems = [
@@ -334,7 +411,7 @@ export const galleryItems = [
     category: "equipment",
     image: "https://elina.frappe.cloud/files/product-3.png",
   },
-]
+];
 
 // Update the team members data
 export const teamMembers = [
@@ -352,7 +429,7 @@ export const teamMembers = [
     bio: "Sneha Jagadeesh brings extensive expertise in corporate strategy and stakeholder engagement. As Director, she focuses on driving business development and fostering key partnerships.",
     image: "https://elina.frappe.cloud/files/Sneha-Jagadeesh.png",
   },
-    {
+  {
     id: 3,
     name: "Jyothish Antony",
     position: "Director",
@@ -366,8 +443,7 @@ export const teamMembers = [
     bio: "Sunit oversees daily operations at Syena, optimizing processes and coordinating cross-functional teams to ensure timely delivery and top-quality products.",
     image: "https://elina.frappe.cloud/files/Sunit-Jagadeesh.png",
   },
-
-]
+];
 
 // Add company contact information
 export const companyInfo = {
@@ -399,4 +475,4 @@ export const companyInfo = {
     linkedin: "https://www.linkedin.com/company/elina-so/",
     youtube: "",
   },
-}
+};

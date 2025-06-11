@@ -13,6 +13,7 @@ import { WishlistProvider } from "@/components/wishlist-provider"
 import { ToastProvider } from "@/components/toast-provider"
 import QuoteModalWrapper from "@/components/quote-modal-wrapper"
 import { Suspense } from "react"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -101,22 +102,24 @@ export default function RootLayout({
         </script>
       </head>
       <body className={inter.className}>
-        <ToastProvider>
-          <WishlistProvider>
-            <CartProvider>
-              <QuoteModalProvider>
-                <Suspense>
-                  <Header />
-                  {children}
-                  <Footer />
-                  <QuoteModalWrapper />
-                </Suspense>
-                <Analytics />
-                <SpeedInsights />
-              </QuoteModalProvider>
-            </CartProvider>
-          </WishlistProvider>
-        </ToastProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <ToastProvider>
+            <WishlistProvider>
+              <CartProvider>
+                <QuoteModalProvider>
+                  <Suspense>
+                    <Header />
+                    {children}
+                    <Footer />
+                    <QuoteModalWrapper />
+                  </Suspense>
+                  <Analytics />
+                  <SpeedInsights />
+                </QuoteModalProvider>
+              </CartProvider>
+            </WishlistProvider>
+          </ToastProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
