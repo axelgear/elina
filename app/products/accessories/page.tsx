@@ -3,50 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function AccessoriesPage() {
-  const accessoryCategories = [
-    {
-      id: 1,
-      name: "Kitchen Tools & Utensils",
-      description: "Professional-grade tools for food preparation and cooking",
-      image: "https://elina.frappe.cloud/files/Kitchen%20Tools.png",
-      items: ["Chef Knives", "Cutting Boards", "Mixing Bowls", "Measuring Tools"],
-    },
-    {
-      id: 2,
-      name: "Storage Solutions",
-      description: "Organized storage systems for ingredients and equipment",
-      image: "https://elina.frappe.cloud/files/Storage%20Solutions.png",
-      items: ["Food Containers", "Shelving Units", "Spice Racks", "Ingredient Bins"],
-    },
-    {
-      id: 3,
-      name: "Cleaning Supplies",
-      description: "Professional cleaning equipment and sanitization tools",
-      image: "https://elina.frappe.cloud/files/Cleaning%20Supplies.png",
-      items: ["Sanitizers", "Cleaning Cloths", "Brushes", "Detergents"],
-    },
-    {
-      id: 4,
-      name: "Safety Equipment",
-      description: "Essential safety gear for kitchen operations",
-      image: "https://elina.frappe.cloud/files/saftey.png",
-      items: ["Fire Extinguishers", "First Aid Kits", "Safety Gloves", "Non-slip Mats"],
-    },
-    {
-      id: 5,
-      name: "Serving Accessories",
-      description: "Professional serving and presentation equipment",
-      image: "https://elina.frappe.cloud/files/serving.png",
-      items: ["Serving Trays", "Chafing Dishes", "Serving Utensils", "Display Stands"],
-    },
-    {
-      id: 6,
-      name: "Maintenance Parts",
-      description: "Replacement parts and maintenance supplies",
-      image: "https://elina.frappe.cloud/files/Maintenancere.png",
-      items: ["Filters", "Gaskets", "Heating Elements", "Control Knobs"],
-    },
-  ]
+  
 
   return (
     <main className="min-h-screen py-20 page-background">
@@ -61,40 +18,6 @@ export default function AccessoriesPage() {
           </p>
         </div>
 
-        {/* Accessories Grid
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {accessoryCategories.map((category, index) => (
-            <div
-              key={category.id}
-              className="modern-card overflow-hidden fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative h-48 w-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700">
-                <Image src={category.image || "/placeholder.svg"} alt={category.name} fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">{category.name}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{category.description}</p>
-                <div className="space-y-2 mb-6">
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100">Popular Items:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {category.items.map((item, idx) => (
-                      <span
-                        key={idx}
-                        className="bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-400 text-xs px-2 py-1 rounded-full"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <Button className="w-full btn-modern-primary">
-                  <Link href="/products-list">Browse Items</Link>
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>  */}
 
         {/* Features Section */}
         <div className="glass-card p-8 mb-16">

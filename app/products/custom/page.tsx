@@ -1,85 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { customSolutions, customizationOptions } from "@/lib/data"
 
 export default function CustomProductsPage() {
-  const customSolutions = [
-  {
-    id: 1,
-    title: "Restaurant Kitchens",
-    description: "End-to-end design and equipment for efficient, high-volume restaurant operations.",
-    image: "https://elina.frappe.cloud/files/Research-Developme.png",
-    process: ["Site Survey", "Menu Analysis", "Layout Planning", "Installation & Handover"],
-  },
-  {
-    id: 2,
-    title: "Café & Bakery Kitchens",
-    description: "Specialized layouts and baking equipment for cafes, bakeries, and patisseries.",
-    image: "https://elina.frappe.cloud/files/Indian-themed-bakery.png",
-    process: ["Space Assessment", "Equipment Selection", "Utility Mapping", "Commissioning"],
-  },
-  {
-    id: 3,
-    title: "Catering Kitchens",
-    description: "Mobile and high-capacity setups designed for off-site catering services.",
-    image: "https://elina.frappe.cloud/files/bulk-cooking-kitchen.png",
-    process: ["Requirement Analysis", "Custom Fabrication", "Mobility Planning", "Deployment"],
-  },
-  {
-    id: 4,
-    title: "Cloud Kitchens / Ghost Kitchens",
-    description: "Compact, delivery-optimized kitchens for virtual brands and multi-brand setups.",
-    image: "https://elina.frappe.cloud/files/cloud.png",
-    process: ["Workflow Optimization", "Multi-brand Integration", "Ventilation & Safety", "Setup & Launch"],
-  },
-  {
-    id: 5,
-    title: "Institutional Kitchens",
-    description: "Mass-meal production kitchens for schools, colleges, hospitals, and hostels.",
-    image: "https://elina.frappe.cloud/files/inst.png",
-    process: ["Capacity Planning", "Industrial Equipment Setup", "Hygiene Compliance", "Staff Training"],
-  },
-  {
-    id: 6,
-    title: "Central Commissary Kitchens",
-    description: "Large-scale centralized kitchens for multi-outlet food production and distribution.",
-    image: "https://elina.frappe.cloud/files/centralcommissaryk.png",
-    process: ["Production Flow Design", "Bulk Equipment Installation", "Cold Storage Integration", "Automation"],
-  },
-  /*
-  {
-    id: 7,
-    title: "R&D Kitchens",
-    description: "Custom-built kitchens for testing, food innovation, and product development.",
-    image: "https://elina.frappe.cloud/600x400.png",
-    process: ["Requirement Gathering", "Specialized Equipment", "Prototype Setup", "Iteration Support"],
-  },*/
-]
-
-
-  const customizationOptions = [
-    {
-      title: "Size & Dimensions",
-      description: "Equipment sized to fit your exact space requirements",
-      icon: "📏",
-    },
-    {
-      title: "Material Selection",
-      description: "Choose from various grades of stainless steel and finishes",
-      icon: "🔧",
-    },
-    {
-      title: "Feature Integration",
-      description: "Add specific features and functionalities as needed",
-      icon: "⚙️",
-    },
-    {
-      title: "Smart Technology Integration",
-      description: "Incorporate IoT, automation, and energy-efficient systems",
-      icon: "📡",
-    },
-  ]
-
+  
   return (
     <main className="min-h-screen py-20 page-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

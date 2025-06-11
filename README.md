@@ -27,8 +27,6 @@ A modern, full-featured e-commerce and product showcase web application built wi
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **State Management**: React Context API
 - **Forms**: [React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/)
-- **Carousel**: [Embla Carousel](https://www.embla-carousel.com/)
-- **Charts**: [Recharts](https://recharts.org/)
 - **Other**: [Next Themes](https://github.com/pacocoursey/next-themes), [Sonner](https://sonner.emilkowal.ski/) for toasts
 
 ---
@@ -151,6 +149,5 @@ pnpm start
 - [Radix UI](https://www.radix-ui.com/)
 - [Lucide Icons](https://lucide.dev/)
 - [React Hook Form](https://react-hook-form.com/)
-- [Zod](https://zod.dev/)
 
 ---

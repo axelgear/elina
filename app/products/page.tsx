@@ -1,53 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { commercialProducts } from "@/lib/data"
 
 export default function CommercialProductsPage() {
-  const commercialProducts = [
-    {
-      id: 1,
-      name: "Commercial Range Cookers",
-      description: "High-performance gas and electric range cookers for professional kitchens",
-      image: "https://elina.frappe.cloud/files/product-1.png",
-      features: ["Heavy-duty construction", "Multiple burner configurations", "Easy maintenance"],
-    },
-    {
-      id: 2,
-      name: "Stainless Steel Work Tables",
-      description: "Durable work surfaces with storage options for commercial food preparation",
-      image: "https://elina.frappe.cloud/files/product-2.png",
-      features: ["Food-grade stainless steel", "Adjustable shelving", "Easy to clean"],
-    },
-    {
-      id: 3,
-      name: "Commercial Dishwashers",
-      description: "High-capacity dishwashing systems for restaurants and hotels",
-      image: "https://elina.frappe.cloud/files/R.jpg",
-      features: ["Fast wash cycles", "Energy efficient", "Multiple rack configurations"],
-    },
-    {
-      id: 4,
-      name: "Ventilation Systems",
-      description: "Complete kitchen ventilation solutions including hoods and exhaust systems",
-      image: "https://elina.frappe.cloud/files/product-3.png",
-      features: ["Powerful extraction", "Fire suppression ready", "Custom sizing available"],
-    },
-    {
-      id: 5,
-      name: "Refrigeration Units",
-      description: "Commercial refrigerators and freezers for food storage and display",
-      image: "https://elina.frappe.cloud/files/OIP.jpg",
-      features: ["Temperature control", "Energy efficient", "Various sizes available"],
-    },
-    {
-      id: 6,
-      name: "Food Preparation Equipment",
-      description: "Mixers, slicers, and other food preparation machinery",
-      image: "https://elina.frappe.cloud/files/Catering-PrepEqu-FoodSlicers2.jpg",
-      features: ["Heavy-duty motors", "Safety features", "Easy operation"],
-    },
-  ]
-
   return (
     <main className="min-h-screen py-20 page-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

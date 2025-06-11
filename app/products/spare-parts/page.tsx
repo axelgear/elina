@@ -1,76 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { services } from "@/lib/data"
 
 export default function SparePartsPage() {
-  const partCategories = [
-    {
-      id: 1,
-      name: "Heating Elements",
-      description: "Replacement heating elements for ovens, ranges, and warming equipment",
-      image: "https://placehold.co/600x400.png",
-      compatibility: ["Commercial Ovens", "Range Cookers", "Warming Cabinets"],
-    },
-    {
-      id: 2,
-      name: "Control Components",
-      description: "Thermostats, timers, and control panels for precise operation",
-      image: "https://placehold.co/600x400.png",
-      compatibility: ["All Equipment Types", "Digital Controls", "Analog Systems"],
-    },
-    {
-      id: 3,
-      name: "Filters & Gaskets",
-      description: "Sealing components and filtration systems for optimal performance",
-      image: "https://placehold.co/600x400.png",
-      compatibility: ["Ventilation Systems", "Refrigeration", "Dishwashers"],
-    },
-    {
-      id: 4,
-      name: "Motors & Pumps",
-      description: "Replacement motors and pumps for various kitchen equipment",
-      image: "https://placehold.co/600x400.png",
-      compatibility: ["Mixers", "Dishwashers", "Ventilation Fans"],
-    },
-    {
-      id: 5,
-      name: "Burner Components",
-      description: "Gas burner parts, igniters, and flame control components",
-      image: "https://placehold.co/600x400.png",
-      compatibility: ["Gas Ranges", "Wok Burners", "Griddles"],
-    },
-    {
-      id: 6,
-      name: "Refrigeration Parts",
-      description: "Compressors, condensers, and cooling system components",
-      image: "https://placehold.co/600x400.png",
-      compatibility: ["Walk-in Coolers", "Reach-in Refrigerators", "Freezers"],
-    },
-  ]
-
-  const services = [
-    {
-      title: "Part Identification",
-      description: "Help identifying the correct replacement part for your equipment",
-      icon: "🔍",
-    },
-    {
-      title: "Installation Support",
-      description: "Technical guidance for proper installation and setup",
-      icon: "🔧",
-    },
-    {
-      title: "Warranty Coverage",
-      description: "Comprehensive warranty on all genuine replacement parts",
-      icon: "🛡️",
-    },
-    {
-      title: "Express Shipping",
-      description: "Fast delivery to minimize equipment downtime",
-      icon: "🚚",
-    },
-  ]
-
+  
   return (
     <main className="min-h-screen py-20 page-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,40 +17,7 @@ export default function SparePartsPage() {
           </p>
         </div>
 
-        {/* Parts Categories
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {partCategories.map((category, index) => (
-            <div
-              key={category.id}
-              className="modern-card overflow-hidden fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative h-48 w-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700">
-                <Image src={category.image || "/placeholder.svg"} alt={category.name} fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">{category.name}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{category.description}</p>
-                <div className="space-y-2 mb-6">
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100">Compatible with:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {category.compatibility.map((item, idx) => (
-                      <span
-                        key={idx}
-                        className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 text-xs px-2 py-1 rounded-full"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <Button className="w-full btn-modern-primary">
-                  <Link href="/products-list">Find Parts</Link>
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>  */}
+       
 
         {/* Services Section */}
         <div className="glass-card p-8 mb-16">
