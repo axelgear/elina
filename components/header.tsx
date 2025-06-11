@@ -186,8 +186,8 @@ export default function Header() {
                 )}
               </Button>
 
-              {/* Theme Toggle
-              <ThemeToggle />*/}
+              {/* Theme Toggle*/}
+              <ThemeToggle />
 
               <Button className="btn-modern-primary" onClick={openQuoteModal}>
                 Request Quote
