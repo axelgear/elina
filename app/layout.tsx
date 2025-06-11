@@ -102,7 +102,7 @@ export default function RootLayout({
         </script>
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ToastProvider>
             <WishlistProvider>
               <CartProvider>
