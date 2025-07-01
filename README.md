@@ -40,7 +40,7 @@ A modern, full-featured e-commerce and product showcase web application built wi
 
 ### Installation
 
-```bash
+\`\`\`bash
 git clone https://github.com/axelgear/elina.git
 cd elina
 pnpm install
@@ -48,32 +48,32 @@ pnpm install
 npm install
 # or
 yarn install
-```
+\`\`\`
 
 ### Development
 
-```bash
+\`\`\`bash
 pnpm dev
 # or
 npm run dev
 # or
 yarn dev
-```
+\`\`\`
 
 Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
 ### Production
 
-```bash
+\`\`\`bash
 pnpm build
 pnpm start
-```
+\`\`\`
 
 ---
 
 ## Project Structure
 
-```
+\`\`\`
 .
 ├── app/                # Next.js app directory (pages, layouts, routes)
 ├── components/         # React components (UI, modals, header, footer, etc.)
@@ -88,7 +88,7 @@ pnpm start
 ├── tailwind.config.ts  # Tailwind CSS configuration
 ├── tsconfig.json       # TypeScript configuration
 └── README.md           # This file
-```
+\`\`\`
 
 ---
 

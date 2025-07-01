@@ -117,12 +117,12 @@ export default function Header() {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link
+              {/*<Link
                 href="/products-list"
                 className="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 font-medium transition-colors"
               >
                 Products Catalog
-              </Link>
+              </Link> */}
 
               <Link
                 href="/gallery"
@@ -308,13 +308,13 @@ export default function Header() {
                 >
                   Contact
                 </Link>
-                <Link
+                {/*<Link
                   href="/products-list"
                   className="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 font-medium transition-colors py-2"
                   onClick={toggleMenu}
                 >
                   Products Catalog
-                </Link>
+                </Link>*/}
 
                 <div className="pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
                   {/*<ThemeToggle />*/}
