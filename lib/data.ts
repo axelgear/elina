@@ -357,10 +357,10 @@ export const galleryItems = [
   },
   {
     id: 2,
-    title: "Restaurant Kitchen Installation",
-    description: "Modern kitchen installation for a fine dining restaurant",
+    title: "MaiMai Restaurant Kitchen",
+    description: "Syena engineered and installed a state-of-the-art commercial kitchen for MaiMai (Bengaluru), empowering Chef Shamik Mondal's brigade to deliver unforgettable culinary experiences.",
     category: "commercial",
-    image: "https://placehold.co/600x400.png",
+    image: "/images/gallery/maimai/maimai%20(1).jpg",
   },
   {
     id: 3,
@@ -410,6 +410,20 @@ export const galleryItems = [
     description: "Advanced kitchen ventilation systems for commercial use",
     category: "equipment",
     image: "https://elina.frappe.cloud/files/product-3.png",
+  },
+  {
+    id: 10,
+    title: "MaiMai Restaurant Kitchen",
+    description: "High-efficiency cooking line featuring advanced induction ranges and smart exhaust hoods installed at MaiMai.",
+    category: "commercial",
+    image: "/images/gallery/maimai/maimai%20(2).jpg",
+  },
+  {
+    id: 11,
+    title: "MaiMai Restaurant Kitchen",
+    description: "Stainless-steel prep zone with integrated refrigeration and hygiene stations at MaiMai.",
+    category: "commercial",
+    image: "/images/gallery/maimai/maimai%20(3).jpg",
   },
 ];
 

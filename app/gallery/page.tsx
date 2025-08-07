@@ -18,14 +18,33 @@ type GalleryItemProps = {
 }
 
 export default function GalleryPage() {
+  // Helper: return only the first item for each distinct project title
+  const getUniqueByTitle = (items: typeof galleryItems) => {
+    const seen = new Set<string>()
+    return items.filter((item) => {
+      if (seen.has(item.title)) return false
+      seen.add(item.title)
+      return true
+    })
+  }
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [lightboxImages, setLightboxImages] = useState<{ id: number; src: string; alt: string }[]>([])
 
   // Updated gallery items with placeholder images
   
 
-  const openLightbox = (index: number) => {
-    setCurrentImageIndex(index)
+  const openLightbox = (projectTitle: string, clickedId: number) => {
+    // Collect images that belong to the same project (identified by the title)
+    const projectImages = galleryItems
+      .filter((item) => item.title === projectTitle)
+      .map((item) => ({ id: item.id, src: item.image, alt: item.title }))
+
+    // Determine which image within the project set was clicked
+    const clickedIndex = projectImages.findIndex((img) => img.id === clickedId)
+
+    setLightboxImages(projectImages)
+    setCurrentImageIndex(clickedIndex >= 0 ? clickedIndex : 0)
     setLightboxOpen(true)
   }
 
@@ -33,12 +52,7 @@ export default function GalleryPage() {
     setLightboxOpen(false)
   }
 
-  // Convert gallery items to lightbox format
-  const lightboxImages = galleryItems.map((item) => ({
-    id: item.id,
-    src: item.image,
-    alt: item.title,
-  }))
+
 
   return (
     <main className="min-h-screen py-20 page-background">
@@ -70,42 +84,33 @@ export default function GalleryPage() {
 
           <TabsContent value="all" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryItems.map((item, index) => (
-                <GalleryItem key={item.id} item={item} onClick={() => openLightbox(index)} />
+              {getUniqueByTitle(galleryItems).map((item) => (
+                <GalleryItem key={item.id} item={item} onClick={() => openLightbox(item.title, item.id)} />
               ))}
             </div>
           </TabsContent>
 
           <TabsContent value="commercial" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryItems
-                .filter((item) => item.category === "commercial")
-                .map((item) => {
-                  const index = galleryItems.findIndex((i) => i.id === item.id)
-                  return <GalleryItem key={item.id} item={item} onClick={() => openLightbox(index)} />
-                })}
+              {getUniqueByTitle(galleryItems.filter((item) => item.category === "commercial")).map((item) => (
+                  <GalleryItem key={item.id} item={item} onClick={() => openLightbox(item.title, item.id)} />
+                ))}
             </div>
           </TabsContent>
 
           <TabsContent value="renovation" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryItems
-                .filter((item) => item.category === "renovation")
-                .map((item) => {
-                  const index = galleryItems.findIndex((i) => i.id === item.id)
-                  return <GalleryItem key={item.id} item={item} onClick={() => openLightbox(index)} />
-                })}
+              {getUniqueByTitle(galleryItems.filter((item) => item.category === "renovation")).map((item) => (
+                  <GalleryItem key={item.id} item={item} onClick={() => openLightbox(item.title, item.id)} />
+                ))}
             </div>
           </TabsContent>
 
           <TabsContent value="equipment" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryItems
-                .filter((item) => item.category === "equipment")
-                .map((item) => {
-                  const index = galleryItems.findIndex((i) => i.id === item.id)
-                  return <GalleryItem key={item.id} item={item} onClick={() => openLightbox(index)} />
-                })}
+              {getUniqueByTitle(galleryItems.filter((item) => item.category === "equipment")).map((item) => (
+                  <GalleryItem key={item.id} item={item} onClick={() => openLightbox(item.title, item.id)} />
+                ))}
             </div>
           </TabsContent>
         </Tabs>
